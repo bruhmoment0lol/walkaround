@@ -44,12 +44,12 @@ dir third_party_src
 
 [[ -f $out/gxp/gxp-0.2.4-beta.jar ]] || (
   dir $out/gxp
-  get http://gxp.googlecode.com/files/ gxp-0.2.4-beta.jar sha1 b80c7c780973ffd5eac63de301eb6a05035aeb46
+  get https://repo1.maven.org/maven2/com/google/gxp/google-gxp/0.2.4-beta/ google-gxp-0.2.4-beta.jar sha1 b80c7c780973ffd5eac63de301eb6a05035aeb46
 )
 
 [[ -f $out/commons-cli/commons-cli-1.2.jar ]] || (
   dir commons-cli
-  get http://www.apache.org/dist/commons/cli/binaries/ commons-cli-1.2-bin.zip md5 c10b9d17317815e44367c477ccecb075
+  get http://archive.apache.org/dist/commons/cli/binaries/ commons-cli-1.2-bin.zip md5 c10b9d17317815e44367c477ccecb075
   unzip -o -q commons-cli-1.2-bin.zip
   mkdir -p $out/commons-cli
   cp commons-cli-1.2/{commons-cli-1.2.jar,LICENSE.txt,NOTICE.txt} $out/commons-cli
@@ -57,7 +57,7 @@ dir third_party_src
 
 [[ -f $out/commons-codec/commons-codec-1.5.jar ]] || (
   dir commons-codec
-  get http://mirrors.axint.net/apache//commons/codec/binaries/ commons-codec-1.5-bin.zip md5 376bd4a1cb78f41bf1eb1c544af6f1c0
+  get https://archive.apache.org/dist/commons/codec/binaries/ commons-codec-1.5-bin.zip md5 376bd4a1cb78f41bf1eb1c544af6f1c0
   unzip -o -q commons-codec-1.5-bin.zip
   mkdir -p $out/commons-codec
   cp commons-codec-1.5/{commons-codec-1.5.jar,LICENSE.txt,NOTICE.txt} $out/commons-codec
